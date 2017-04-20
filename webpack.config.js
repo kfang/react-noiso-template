@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './main.js',
+    entry: ['whatwg-fetch', './main.js'],
     output: {
         path: __dirname + "/build",
         filename: 'bundle.js'
@@ -14,7 +14,7 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 query: {
-                    presets: ['es2015', 'react']
+                    presets: ['es2015', 'react', 'stage-2']
                 }
             }
         ]

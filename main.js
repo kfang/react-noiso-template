@@ -1,10 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Router, Route, browserHistory} from 'react-router'
-import Hello from './components/hello.jsx';
+import {BrowserRouter, Route} from 'react-router-dom'
+import Hello from './components/Hello.jsx';
+import About from './components/About.jsx';
+import 'whatwg-fetch'
 
 ReactDOM.render((
-    <Router history={browserHistory}>
-        <Route path="/" component={Hello} />
-    </Router>
+    <BrowserRouter>
+        <div>
+            <Route exact path="/" component={Hello} />
+            <Route path="/about" component={About} />
+        </div>
+    </BrowserRouter>
 ), document.getElementById("mount-point"));

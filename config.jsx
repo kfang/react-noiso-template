@@ -8,7 +8,7 @@ let ENV = {
 switch (ENV.environment) {
     case 'production':
         ENV.SITE_PROTO = 'https://';
-        ENV.API_HOST_BASE = "productionsite.com";
+        ENV.API_HOST_BASE = "mysite.com";
         break;
 }
 

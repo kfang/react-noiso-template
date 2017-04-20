@@ -29,5 +29,4 @@ are so basic it needs to be part of the minimal template. If you don't want
 them, take them out of package.json or don't use them.
 
 - AJAX: Github Fetch https://github.com/github/fetch
-- Titles: React-Helmet https://github.com/nfl/react-helmet
-- Route: React-Router https://github.com/reactjs/react-router
+- Router: React-Router https://github.com/reactjs/react-router
