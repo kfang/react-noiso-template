@@ -1,16 +1,15 @@
 import React from 'react'
 import {withRouter, Route} from 'react-router-dom'
-import Hello from './Hello'
+import DogBreeds from "./DogBreeds";
 
 class About extends React.Component {
     render(){
-        console.log(this.props);
         return <div>
             <h1>About Page</h1>
-            <button onClick={() => {this.props.history.push('/about/hello')}}>Click Me To Show Hello!</button>
+            <button onClick={() => {this.props.history.push('/about/dogs')}}>Show Me Dog Breeds!</button>
 
-            {/* the component hello will be show iff the route is /about/hello */}
-            <Route path={`${this.props.match.url}/hello`} component={Hello} />
+            {/* DogBreeds will be shown iff the route is /about/hello */}
+            <Route path={`${this.props.match.url}/dogs`} component={DogBreeds} />
         </div>
     }
 }
