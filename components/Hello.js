@@ -8,7 +8,7 @@ class Hello extends React.Component {
             <h1>Hello World!</h1>
             <p>Environment: {ENV.environment}</p>
             <Link to="/about">Go to About page</Link>
-            </div>
+        </div>
     }
 }
 

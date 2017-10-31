@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {BrowserRouter, Route} from 'react-router-dom'
-import Hello from './components/Hello.jsx';
-import About from './components/About.jsx';
+import Hello from './components/Hello';
+import About from './components/About';
 import 'whatwg-fetch'
 
 ReactDOM.render((
