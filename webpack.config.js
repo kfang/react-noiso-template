@@ -1,30 +1,44 @@
-var webpack = require('webpack');
+const webpack = require("webpack");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
 
 module.exports = {
-    entry: ['whatwg-fetch', './main.js'],
+    entry: ['whatwg-fetch', './src/main.js'],
     output: {
-        path: __dirname + "/build",
+        path: __dirname + "/dist",
         filename: 'bundle.js'
     },
     devtool:  "source-map",
     module: {
-        loaders: [
+        rules: [
             {
                 test: /.jsx?$/,
-                loader: 'babel-loader',
                 exclude: /node_modules/,
-                query: {
-                    presets: ['es2015', 'react', 'stage-2']
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: [
+                            "@babel/preset-env",
+                            "@babel/preset-react"
+                        ]
+                    }
                 }
-            }
+            },
         ]
     },
     devServer: {
+        historyApiFallback: true,
+        hot: true,
+        inline: true,
         port: 3001
     },
     plugins: [
+        new CopyWebpackPlugin([
+            { from: "index.html", to: "index.html" }
+        ]),
         new webpack.DefinePlugin({
             'ENVIRONMENT': JSON.stringify(process.env.ENVIRONMENT)
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin(),
     ]
 };
