@@ -33,4 +33,4 @@ them, take them out of package.json or don't use them.
 # Compatibility
 sorry, fetch doesn't work with IE11 without a promise  polyfill. Since I'm trying
 to keep everything to a minimum, I'm not including it. In the future, I might switch
-to using [https://www.npmjs.com/package/axios](axios) instead.
+to using [axios](https://www.npmjs.com/package/axios) instead.
