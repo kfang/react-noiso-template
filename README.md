@@ -2,19 +2,18 @@
 Requirements:
 
 1. git
-2. npm
-3. webpack
+2. yarn
 
 Running:
 
-1. `npm install`
-2. `npm start`
+1. `yarn install`
+2. `yarn start`
 3. open a browser and go to [http://localhost:3001](localhost:3001)
 
 Deployment:
 
-1. `npm run build`
-2. Take '/index.html' and '/build/bundle.js' and put it on your preferred
+1. `yarn build`
+2. Take everything under `/dist` and put it on your preferred
 webserver. Be smart, use CI.
 
 # Why?
@@ -33,4 +32,5 @@ them, take them out of package.json or don't use them.
 
 # Compatibility
 sorry, fetch doesn't work with IE11 without a promise  polyfill. Since I'm trying
-to keep everything to a minimum, I'm not including it
+to keep everything to a minimum, I'm not including it. In the future, I might switch
+to using [https://www.npmjs.com/package/axios](axios) instead.
